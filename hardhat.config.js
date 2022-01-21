@@ -1,4 +1,5 @@
 require("@nomiclabs/hardhat-waffle")
+require("hardhat-gas-reporter")
 require("./tasks/block-number")
 
 // This is a sample Hardhat task. To learn how to create your own go to
@@ -34,4 +35,14 @@ module.exports = {
     },
   },
   solidity: "0.8.8",
+  etherscan: {
+    apiKey: process.env.ETHERSCAN_API_KEY,
+  },
+  gasReporter: {
+    enabled: true,
+    currency: "USD", // why you no work?
+    outputFile: "gas-report.txt",
+    noColors: true,
+    coinmarketcap: process.env.COINMARKETCAP_API_KEY,
+  },
 }
