@@ -1,6 +1,7 @@
 require("@nomiclabs/hardhat-waffle")
 require("hardhat-gas-reporter")
 require("./tasks/block-number")
+require("@nomiclabs/hardhat-etherscan")
 const { task } = require("hardhat/config")
 require("dotenv").config()
 require("solidity-coverage")
@@ -25,7 +26,8 @@ module.exports = {
     hardhat: {},
     kovan: {
       url: KOVAN_RPC_URL,
-      account: [PRIVATE_KEY],
+      accounts: [PRIVATE_KEY],
+      chainId: 42,
     },
   },
   solidity: "0.8.8",

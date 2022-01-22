@@ -1,11 +1,18 @@
 # Hardhat Simple Storage
 
+This is a section of the Javascript Blockchain/Smart Contract FreeCodeCamp Course.
+
+Video Coming soon...
+
+[Full Repo](https://github.com/smartcontractkit/full-blockchain-solidity-course-js)
+
 - [Hardhat Simple Storage](#hardhat-simple-storage)
 - [Getting Started](#getting-started)
   - [Requirements](#requirements)
   - [Quickstart](#quickstart)
 - [Useage](#useage)
   - [Testing](#testing)
+    - [Test Coverage](#test-coverage)
 - [Deployment to a testnet or mainnet](#deployment-to-a-testnet-or-mainnet)
   - [Estimate gas](#estimate-gas)
   - [Verify on etherscan](#verify-on-etherscan)
@@ -52,6 +59,12 @@ npx hardhat run scripts/deploy.js
 npx hardhat test
 ```
 
+### Test Coverage
+
+```
+npx hardhat coverage
+```
+
 # Deployment to a testnet or mainnet
 
 1. Setup environment variabltes
@@ -86,11 +99,14 @@ And you'll see and output file called `gas-report.txt`
 
 If you deploy to a testnet or mainnet, you can verify it if you get an [API Key](https://etherscan.io/myapikey) from Etherscan and set it as an environemnt variable named `ETHERSCAN_API_KEY`. You can pop it into your `.env` file as seen in the `.env.example`.
 
-Then, verify it with:
+In it's current state, if you have your api key set, it will auto verify kovan contracts!
+
+However, you can manual verify with:
 
 ```
 npx hardhat verify --constructor-args arguments.js DEPLOYED_CONTRACT_ADDRESS
 ```
+
 
 # Thank you!
 

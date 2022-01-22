@@ -18,7 +18,11 @@ async function main() {
   console.log("Deploying contract...")
   const simpleStorage = await SimpleStorageFactory.deploy()
   await simpleStorage.deployed()
+
+  // We only verify on a testnet!
   if (network.config.chainId === 42 && process.env.ETHERSCAN_API_KEY) {
+    // 6 blocks is sort of a guess
+    await simpleStorage.deployTransaction.wait(6)
     await verify(simpleStorage.address, [])
   }
   console.log("Simple Storage deployed to:", simpleStorage.address)
