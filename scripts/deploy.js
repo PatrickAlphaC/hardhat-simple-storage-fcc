@@ -41,10 +41,18 @@ async function main() {
 
 const verify = async (contractAddress, args) => {
   console.log("Verifying contract...")
-  await run("verify:verify", {
-    address: contractAddress,
-    constructorArguments: args,
-  })
+  try {
+    await run("verify:verify", {
+      address: contractAddress,
+      constructorArguments: args,
+    })
+  } catch (e) {
+    if (e.message.includes("Reason: Already Verified")) {
+      console.log("Already verified!")
+    } else {
+      console.log(e)
+    }
+  }
 }
 
 // We recommend this pattern to be able to use async/await everywhere

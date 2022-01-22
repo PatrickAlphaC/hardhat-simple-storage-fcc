@@ -10,6 +10,7 @@ Video Coming soon...
 - [Getting Started](#getting-started)
   - [Requirements](#requirements)
   - [Quickstart](#quickstart)
+  - [Typescript](#typescript)
 - [Useage](#useage)
   - [Testing](#testing)
     - [Test Coverage](#test-coverage)
@@ -44,6 +45,15 @@ git clone https://github.com/PatrickAlphaC/hardhat-simple-storage-fcc
 cd hardhat-simple-storage-fcc
 npm install
 ```
+
+## Typescript
+
+For the typescript edition, run:
+
+```
+git checkout typescript
+```
+
 
 # Useage
 
