@@ -4,12 +4,21 @@
     "@nomiclabs/hardhat-ethers": "^2.0.4",
     "@nomiclabs/hardhat-etherscan": "^3.0.0",
     "@nomiclabs/hardhat-waffle": "^2.0.2",
+    "@typechain/ethers-v5": "^7.2.0",
+    "@typechain/hardhat": "^2.3.1",
+    "@types/chai": "^4.3.0",
+    "@types/mocha": "^9.1.0",
+    "@types/node": "^12.20.42",
     "chai": "^4.3.4",
     "ethereum-waffle": "^3.4.0",
     "ethers": "^5.5.3",
     "hardhat": "^2.8.3",
     "hardhat-gas-reporter": "^1.0.7",
-    "solidity-coverage": "^0.7.18"
+    "prettier": "^2.5.1",
+    "solidity-coverage": "^0.7.18",
+    "ts-node": "^10.4.0",
+    "typechain": "^5.2.0",
+    "typescript": "^4.5.5"
   },
   "dependencies": {
     "dotenv": "^14.2.0",
@@ -17,6 +26,8 @@
   },
   "scripts": {
     "lint": "npx prettier --check .",
-    "lint:fix": "npx prettier --write ."
+    "lint:fix": "npx prettier --write .",
+    "typechain": "npx typechain",
+    "ci:clean": "rm -rf ./artifacts ./cache .;types"
   }
 }
