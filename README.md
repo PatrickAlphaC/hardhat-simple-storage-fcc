@@ -1,4 +1,4 @@
-# Hardhat Simple Storage
+# Hardhat Simple Storage - Typescript Edition
 
 This is a section of the Javascript Blockchain/Smart Contract FreeCodeCamp Course.
 
@@ -6,7 +6,7 @@ Video Coming soon...
 
 [Full Repo](https://github.com/smartcontractkit/full-blockchain-solidity-course-js)
 
-- [Hardhat Simple Storage](#hardhat-simple-storage)
+- [Hardhat Simple Storage - Typescript Edition](#hardhat-simple-storage---typescript-edition)
 - [Getting Started](#getting-started)
   - [Requirements](#requirements)
   - [Quickstart](#quickstart)
