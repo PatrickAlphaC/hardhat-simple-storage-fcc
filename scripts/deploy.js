@@ -3,7 +3,7 @@
 //
 // When running the script with `npx hardhat run <script>` you'll find the Hardhat
 // Runtime Environment's members available in the global scope.
-const { ethers } = require("hardhat")
+const { ethers, run, network } = require("hardhat")
 
 async function main() {
   // Hardhat always runs the compile task when running scripts with its command
@@ -18,6 +18,9 @@ async function main() {
   console.log("Deploying contract...")
   const simpleStorage = await SimpleStorageFactory.deploy()
   await simpleStorage.deployed()
+  if (network.config.chainId === 42 && process.env.ETHERSCAN_API_KEY) {
+    await verify(simpleStorage.address, [])
+  }
   console.log("Simple Storage deployed to:", simpleStorage.address)
 
   // Get the current value
@@ -30,6 +33,14 @@ async function main() {
   await transactionResponse.wait() // returns transaction receipt
   currentValue = await simpleStorage.retrieve()
   console.log(`Current value: ${currentValue}`)
+}
+
+const verify = async (contractAddress, args) => {
+  console.log("Verifying contract...")
+  await run("verify:verify", {
+    address: contractAddress,
+    constructorArguments: args,
+  })
 }
 
 // We recommend this pattern to be able to use async/await everywhere

@@ -4,9 +4,11 @@
 - [Getting Started](#getting-started)
   - [Requirements](#requirements)
   - [Quickstart](#quickstart)
-  - [Useage](#useage)
+- [Useage](#useage)
   - [Testing](#testing)
 - [Deployment to a testnet or mainnet](#deployment-to-a-testnet-or-mainnet)
+  - [Estimate gas](#estimate-gas)
+  - [Verify on etherscan](#verify-on-etherscan)
 - [Thank you!](#thank-you)
 
 This project is apart of the Hardhat FreeCodeCamp video.
@@ -36,7 +38,7 @@ cd hardhat-simple-storage-fcc
 npm install
 ```
 
-## Useage
+# Useage
 
 Deploy:
 
@@ -68,6 +70,26 @@ Head over to [faucets.chain.link](https://faucets.chain.link/) and get some tesn
 
 ```
 npx hardhat run scripts/deploy.py --network kovan
+```
+
+## Estimate gas
+
+You can estimate how much gas things cost by running:
+
+```
+npx hardhat test
+```
+
+And you'll see and output file called `gas-report.txt`
+
+## Verify on etherscan
+
+If you deploy to a testnet or mainnet, you can verify it if you get an [API Key](https://etherscan.io/myapikey) from Etherscan and set it as an environemnt variable named `ETHERSCAN_API_KEY`. You can pop it into your `.env` file as seen in the `.env.example`.
+
+Then, verify it with:
+
+```
+npx hardhat verify --constructor-args arguments.js DEPLOYED_CONTRACT_ADDRESS
 ```
 
 # Thank you!
