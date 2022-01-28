@@ -27,7 +27,7 @@
   "scripts": {
     "lint": "npx prettier --check .",
     "lint:fix": "npx prettier --write .",
-    "typechain": "npx typechain",
+    "typechain": "npx hardhat typechain",
     "ci:clean": "rm -rf ./artifacts ./cache .;types"
   }
 }
