@@ -3,7 +3,8 @@
 //
 // When running the script with `npx hardhat run <script>` you'll find the Hardhat
 // Runtime Environment's members available in the global scope.
-const { ethers, run, network } = require("hardhat")
+
+import { ethers, run, network } from "hardhat"
 
 async function main() {
   // Hardhat always runs the compile task when running scripts with its command
@@ -39,14 +40,14 @@ async function main() {
   console.log(`Current value: ${currentValue}`)
 }
 
-const verify = async (contractAddress, args) => {
+const verify = async (contractAddress: string, args: any[]) => {
   console.log("Verifying contract...")
   try {
     await run("verify:verify", {
       address: contractAddress,
       constructorArguments: args,
     })
-  } catch (e) {
+  } catch (e: any) {
     if (e.message.toLowerCase().includes("already verified")) {
       console.log("Already verified!")
     } else {

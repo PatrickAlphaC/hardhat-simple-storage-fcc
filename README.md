@@ -1,4 +1,4 @@
-# Hardhat Simple Storage
+# Hardhat Simple Storage - Typescript Edition
 
 This is a section of the Javascript Blockchain/Smart Contract FreeCodeCamp Course.
 
@@ -6,7 +6,7 @@ Video Coming soon...
 
 [Full Repo](https://github.com/smartcontractkit/full-blockchain-solidity-course-js)
 
-- [Hardhat Simple Storage](#hardhat-simple-storage)
+- [Hardhat Simple Storage - Typescript Edition](#hardhat-simple-storage---typescript-edition)
 - [Getting Started](#getting-started)
   - [Requirements](#requirements)
   - [Quickstart](#quickstart)
@@ -17,6 +17,7 @@ Video Coming soon...
 - [Deployment to a testnet or mainnet](#deployment-to-a-testnet-or-mainnet)
   - [Estimate gas](#estimate-gas)
   - [Verify on etherscan](#verify-on-etherscan)
+- [Typescript differences](#typescript-differences)
 - [Thank you!](#thank-you)
 
 This project is apart of the Hardhat FreeCodeCamp video.
@@ -116,7 +117,15 @@ However, you can manual verify with:
 ```
 npx hardhat verify --constructor-args arguments.js DEPLOYED_CONTRACT_ADDRESS
 ```
+# Typescript differences
 
+1. `.js` files are now `.ts`
+2. We added a bunch of typescript and typing packages to our `package.json`
+3. The biggest one being [typechain](https://github.com/dethcrypto/TypeChain)
+   1. This gives your contracts static typing, meaning you'll always know exactly what functions a contract can call. 
+   2. This gives us `factories` that are specific to the contracts they are factories of. See the tests folder for a version of how this is implemented. 
+4. We use `imports` instead of `require`. Confusing to you? [Watch this video](https://www.youtube.com/watch?v=mK54Cn4ceac)
+5. Add `tsconfig.json`
 
 # Thank you!
 
