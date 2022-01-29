@@ -18,6 +18,7 @@ Video Coming soon...
   - [Estimate gas](#estimate-gas)
   - [Verify on etherscan](#verify-on-etherscan)
 - [Typescript differences](#typescript-differences)
+- [Linting](#linting)
 - [Thank you!](#thank-you)
 
 This project is apart of the Hardhat FreeCodeCamp video.
@@ -133,6 +134,17 @@ npx hardhat verify --constructor-args arguments.js DEPLOYED_CONTRACT_ADDRESS
    2. This gives us `factories` that are specific to the contracts they are factories of. See the tests folder for a version of how this is implemented. 
 4. We use `imports` instead of `require`. Confusing to you? [Watch this video](https://www.youtube.com/watch?v=mK54Cn4ceac)
 5. Add `tsconfig.json`
+
+# Linting
+
+To check linting / code formatting:
+```
+yarn lint
+```
+or, to fix: 
+```
+yarn lint:fix
+```
 
 # Thank you!
 
