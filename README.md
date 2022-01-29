@@ -17,6 +17,7 @@ Video Coming soon...
 - [Deployment to a testnet or mainnet](#deployment-to-a-testnet-or-mainnet)
   - [Estimate gas](#estimate-gas)
   - [Verify on etherscan](#verify-on-etherscan)
+- [Linting](#linting)
 - [Thank you!](#thank-you)
 
 This project is apart of the Hardhat FreeCodeCamp video.
@@ -27,23 +28,29 @@ Video coming soon...
 
 ## Requirements
 
-- [Nodejs & npm](https://nodejs.org/en/)
+- [Nodejs & npx](https://nodejs.org/en/)
   - You'll know you've installed nodejs right if you can run:
     - `node --version`
     - And get an ouput like:
     - `vx.x.x`
-  - You'll know you've installed npm right if you can run:
-    - `npm --version`
+  - You'll know you've installed npx right if you can run:
+    - `npx --version`
     - And get an ouput like:
     - `x.x.x`
-- Optional [yarn](https://classic.yarnpkg.com/lang/en/docs/install/) instead of `npm`
+    - You might need to install it with npm
+- [Yarn](https://classic.yarnpkg.com/lang/en/docs/install/) instead of `npm`
+  - You'll know you've installed yarn right if you can run:
+    - `yarn --version`
+    - And get an output like:
+    - `x.x.x`
+    - You might need to install it with npm
 
 ## Quickstart
 
 ```
 git clone https://github.com/PatrickAlphaC/hardhat-simple-storage-fcc
 cd hardhat-simple-storage-fcc
-npm install
+yarn 
 ```
 
 ## Typescript
@@ -117,6 +124,16 @@ However, you can manual verify with:
 npx hardhat verify --constructor-args arguments.js DEPLOYED_CONTRACT_ADDRESS
 ```
 
+# Linting
+
+To check linting / code formatting:
+```
+yarn lint
+```
+or, to fix: 
+```
+yarn lint:fix
+```
 
 # Thank you!
 
