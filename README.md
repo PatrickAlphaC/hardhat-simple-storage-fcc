@@ -14,9 +14,10 @@ Video Coming soon...
 - [Useage](#useage)
   - [Testing](#testing)
     - [Test Coverage](#test-coverage)
-- [Deployment to a testnet or mainnet](#deployment-to-a-testnet-or-mainnet)
   - [Estimate gas](#estimate-gas)
-  - [Verify on etherscan](#verify-on-etherscan)
+  - [Local Deployment](#local-deployment)
+  - [Deployment to a testnet or mainnet](#deployment-to-a-testnet-or-mainnet)
+    - [Verify on etherscan](#verify-on-etherscan)
 - [Linting](#linting)
 - [Thank you!](#thank-you)
 
@@ -84,7 +85,33 @@ npx hardhat test
 npx hardhat coverage
 ```
 
-# Deployment to a testnet or mainnet
+## Estimate gas
+
+You can estimate how much gas things cost by running:
+
+```
+npx hardhat test
+```
+
+And you'll see and output file called `gas-report.txt`
+
+## Local Deployment 
+
+If you'd like to run your own local hardhat network, you can run:
+
+```
+npx hardhat node
+```
+
+And then **in a different terminal**
+
+```
+npx hardhat run scripts/deploy.js --network localhost
+```
+
+And you should see transactions happen in your terminal that is running `npx hardhat node`
+
+## Deployment to a testnet or mainnet
 
 1. Setup environment variabltes
 
@@ -104,17 +131,7 @@ Head over to [faucets.chain.link](https://faucets.chain.link/) and get some tesn
 npx hardhat run scripts/deploy.py --network kovan
 ```
 
-## Estimate gas
-
-You can estimate how much gas things cost by running:
-
-```
-npx hardhat test
-```
-
-And you'll see and output file called `gas-report.txt`
-
-## Verify on etherscan
+### Verify on etherscan
 
 If you deploy to a testnet or mainnet, you can verify it if you get an [API Key](https://etherscan.io/myapikey) from Etherscan and set it as an environemnt variable named `ETHERSCAN_API_KEY`. You can pop it into your `.env` file as seen in the `.env.example`.
 

@@ -29,6 +29,10 @@ module.exports = {
       accounts: [PRIVATE_KEY],
       chainId: 42,
     },
+    localhost: {
+      url: "http://localhost:8545",
+      chainId: 31337,
+    },
   },
   solidity: "0.8.8",
   etherscan: {
