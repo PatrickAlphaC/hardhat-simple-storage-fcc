@@ -16,6 +16,7 @@ Video Coming soon...
     - [Test Coverage](#test-coverage)
   - [Estimate gas](#estimate-gas)
   - [Local Deployment](#local-deployment)
+    - [Important localhost note](#important-localhost-note)
   - [Deployment to a testnet or mainnet](#deployment-to-a-testnet-or-mainnet)
     - [Verify on etherscan](#verify-on-etherscan)
 - [Linting](#linting)
@@ -110,6 +111,10 @@ npx hardhat run scripts/deploy.js --network localhost
 ```
 
 And you should see transactions happen in your terminal that is running `npx hardhat node`
+
+### Important localhost note
+
+If you use metamask with a local network, everytime you shut down your node, you'll need to reset your account. Settings -> Advanced -> Reset account. Don't do this with a metamask you have real funds in. And maybe don't do this if you're a little confused by this. 
 
 ## Deployment to a testnet or mainnet
 
