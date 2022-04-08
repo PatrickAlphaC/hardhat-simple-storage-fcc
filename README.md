@@ -32,22 +32,13 @@ Video coming soon...
 
 - [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
   - You'll know you did it right if you can run `git --version` and you see a response like `git version x.x.x`
-- [Nodejs & npx](https://nodejs.org/en/)
+- [Nodejs](https://nodejs.org/en/)
   - You'll know you've installed nodejs right if you can run:
-    - `node --version`
-    - And get an ouput like:
-    - `vx.x.x`
-  - You'll know you've installed npx right if you can run:
-    - `npx --version`
-    - And get an ouput like:
-    - `x.x.x`
-    - You might need to install it with npm
-- [Yarn](https://classic.yarnpkg.com/lang/en/docs/install/) instead of `npm`
+    - `node --version` and get an ouput like: `vx.x.x`
+- [Yarn](https://yarnpkg.com/getting-started/install) instead of `npm`
   - You'll know you've installed yarn right if you can run:
-    - `yarn --version`
-    - And get an output like:
-    - `x.x.x`
-    - You might need to install it with npm
+    - `yarn --version` and get an output like: `x.x.x`
+    - You might need to [install it with `npm`](https://classic.yarnpkg.com/lang/en/docs/install/) or `corepack`
 
 ## Quickstart
 
