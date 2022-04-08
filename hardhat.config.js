@@ -2,7 +2,6 @@ require("@nomiclabs/hardhat-waffle")
 require("hardhat-gas-reporter")
 require("./tasks/block-number")
 require("@nomiclabs/hardhat-etherscan")
-const { task } = require("hardhat/config")
 require("dotenv").config()
 require("solidity-coverage")
 // You need to export an object to set up your config
