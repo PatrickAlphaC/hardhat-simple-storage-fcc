@@ -9,6 +9,7 @@ Video Coming soon...
 - [Hardhat Simple Storage - Typescript Edition](#hardhat-simple-storage---typescript-edition)
 - [Getting Started](#getting-started)
   - [Requirements](#requirements)
+  - [Requirements](#requirements-1)
   - [Quickstart](#quickstart)
   - [Typescript](#typescript)
 - [Useage](#useage)
@@ -29,24 +30,17 @@ Video coming soon...
 
 ## Requirements
 
+## Requirements
+
 - [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
   - You'll know you did it right if you can run `git --version` and you see a response like `git version x.x.x`
-- [Nodejs & npx](https://nodejs.org/en/)
+- [Nodejs](https://nodejs.org/en/)
   - You'll know you've installed nodejs right if you can run:
-    - `node --version`
-    - And get an ouput like:
-    - `vx.x.x`
-  - You'll know you've installed npx right if you can run:
-    - `npx --version`
-    - And get an ouput like:
-    - `x.x.x`
-    - You might need to install it with npm
-- [Yarn](https://classic.yarnpkg.com/lang/en/docs/install/) instead of `npm`
+    - `node --version` and get an ouput like: `vx.x.x`
+- [Yarn](https://yarnpkg.com/getting-started/install) instead of `npm`
   - You'll know you've installed yarn right if you can run:
-    - `yarn --version`
-    - And get an output like:
-    - `x.x.x`
-    - You might need to install it with npm
+    - `yarn --version` and get an output like: `x.x.x`
+    - You might need to [install it with `npm`](https://classic.yarnpkg.com/lang/en/docs/install/) or `corepack`
 
 ## Quickstart
 
@@ -71,19 +65,19 @@ git checkout typescript
 Deploy:
 
 ```
-npx hardhat run scripts/deploy.js
+yarn hardhat run scripts/deploy.js
 ```
 
 ## Testing
 
 ```
-npx hardhat test
+yarn hardhat test
 ```
 
 ### Test Coverage
 
 ```
-npx hardhat coverage
+yarn hardhat coverage
 ```
 
 # Deployment to a testnet or mainnet
@@ -103,7 +97,7 @@ Head over to [faucets.chain.link](https://faucets.chain.link/) and get some tesn
 3. Deploy
 
 ```
-npx hardhat run scripts/deploy.py --network kovan
+yarn hardhat run scripts/deploy.py --network kovan
 ```
 
 ## Estimate gas
@@ -111,7 +105,7 @@ npx hardhat run scripts/deploy.py --network kovan
 You can estimate how much gas things cost by running:
 
 ```
-npx hardhat test
+yarn hardhat test
 ```
 
 And you'll see and output file called `gas-report.txt`
@@ -125,7 +119,7 @@ In it's current state, if you have your api key set, it will auto verify kovan c
 However, you can manual verify with:
 
 ```
-npx hardhat verify --constructor-args arguments.js DEPLOYED_CONTRACT_ADDRESS
+yarn hardhat verify --constructor-args arguments.js DEPLOYED_CONTRACT_ADDRESS
 ```
 # Typescript differences
 
