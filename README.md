@@ -124,7 +124,7 @@ Head over to [faucets.chain.link](https://faucets.chain.link/) and get some tesn
 3. Deploy
 
 ```
-npx hardhat run scripts/deploy.py --network kovan
+npx hardhat run scripts/deploy.js --network kovan
 ```
 
 ### Verify on etherscan
