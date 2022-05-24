@@ -65,7 +65,7 @@ git checkout typescript
 Deploy:
 
 ```
-yarn hardhat run scripts/deploy.js
+yarn hardhat run scripts/deploy.ts
 ```
 
 ## Testing
@@ -97,7 +97,7 @@ Head over to [faucets.chain.link](https://faucets.chain.link/) and get some tesn
 3. Deploy
 
 ```
-yarn hardhat run scripts/deploy.py --network kovan
+yarn hardhat run scripts/deploy.ts --network rinkeby
 ```
 
 ## Estimate gas
