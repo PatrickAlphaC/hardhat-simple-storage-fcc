@@ -1,5 +1,6 @@
 // imports
 const { ethers, run, network } = require("hardhat")
+const fs = require("fs-extra")
 
 // async main
 async function main() {
@@ -26,6 +27,7 @@ async function main() {
 }
 
 // async function verify(contractAddress, args) {
+removeArtifactsAndCacheBeforeVerify()
 const verify = async (contractAddress, args) => {
   console.log("Verifying contract...")
   try {
@@ -40,6 +42,16 @@ const verify = async (contractAddress, args) => {
       console.log(e)
     }
   }
+}
+
+
+async function removeArtifactsAndCacheBeforeVerify() {
+    try {
+        await fs.remove("./artifacts/", "./cache/")
+        console.log("<artifacts and cache Orders>, successfully deleted")
+    } catch (err) {
+        console.error(err)
+    }
 }
 
 // main
