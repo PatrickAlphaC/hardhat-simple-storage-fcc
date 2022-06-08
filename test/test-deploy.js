@@ -27,4 +27,23 @@ describe("SimpleStorage", function () {
     const currentValue = await simpleStorage.retrieve()
     assert.equal(currentValue.toString(), expectedValue)
   })
+
+  // Extra - this is not in the video
+  it("Should work correctly with the people struct and array", async function () {
+    const expectedPersonName = "Patrick"
+    const expectedFavoriteNumber = "16"
+    const transactionResponse = await simpleStorage.addPerson(
+      expectedPersonName,
+      expectedFavoriteNumber
+    )
+    await transactionResponse.wait(1)
+    const { favoriteNumber, name } = await simpleStorage.people(0)
+    // We could also do it like this
+    // const person = await simpleStorage.people(0)
+    // const favNumber = person.favoriteNumber
+    // const pName = person.name
+
+    assert.equal(name, expectedPersonName)
+    assert.equal(favoriteNumber, expectedFavoriteNumber)
+  })
 })
