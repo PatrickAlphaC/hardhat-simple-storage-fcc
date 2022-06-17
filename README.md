@@ -63,7 +63,7 @@ If you can't or don't want to run and install locally, you can work with this re
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#github.com/PatrickAlphaC/hardhat-simple-storage-fcc)
 
 
-# Useage
+# Usage
 
 Deploy:
 
