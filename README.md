@@ -11,7 +11,7 @@ This is a section of the Javascript Blockchain/Smart Contract FreeCodeCamp Cours
   - [Requirements](#requirements)
   - [Quickstart](#quickstart)
   - [Typescript](#typescript)
-- [Useage](#useage)
+- [Usage](#usage)
   - [Testing](#testing)
     - [Test Coverage](#test-coverage)
   - [Estimate gas](#estimate-gas)
@@ -116,7 +116,7 @@ If you use metamask with a local network, everytime you shut down your node, you
 
 ## Deployment to a testnet or mainnet
 
-1. Setup environment variabltes
+1. Setup environment variables
 
 You'll want to set your `RINKEBY_RPC_URL` and `PRIVATE_KEY` as environment variables. You can add them to a `.env` file, similar to what you see in `.env.example`.
 
@@ -136,7 +136,7 @@ npx hardhat run scripts/deploy.js --network rinkeby
 
 ### Verify on etherscan
 
-If you deploy to a testnet or mainnet, you can verify it if you get an [API Key](https://etherscan.io/myapikey) from Etherscan and set it as an environemnt variable named `ETHERSCAN_API_KEY`. You can pop it into your `.env` file as seen in the `.env.example`.
+If you deploy to a testnet or mainnet, you can verify it if you get an [API Key](https://etherscan.io/myapikey) from Etherscan and set it as an environment variable named `ETHERSCAN_API_KEY`. You can pop it into your `.env` file as seen in the `.env.example`.
 
 In it's current state, if you have your api key set, it will auto verify rinkeby contracts!
 
