@@ -12,7 +12,7 @@ Video Coming soon...
   - [Requirements](#requirements-1)
   - [Quickstart](#quickstart)
   - [Typescript](#typescript)
-- [Useage](#useage)
+- [Usage](#usage)
   - [Testing](#testing)
     - [Test Coverage](#test-coverage)
 - [Deployment to a testnet or mainnet](#deployment-to-a-testnet-or-mainnet)
