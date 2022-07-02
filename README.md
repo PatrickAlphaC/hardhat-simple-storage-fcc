@@ -45,7 +45,8 @@ Video coming soon...
 ```
 git clone https://github.com/PatrickAlphaC/hardhat-simple-storage-fcc
 cd hardhat-simple-storage-fcc
-yarn 
+yarn
+yarn hardhat
 ```
 
 ## Typescript
