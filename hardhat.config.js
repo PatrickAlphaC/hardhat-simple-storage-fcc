@@ -14,6 +14,12 @@ const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY || ""
 const RINKEBY_RPC_URL =
   process.env.RINKEBY_RPC_URL ||
   "https://eth-rinkeby.alchemyapi.io/v2/your-api-key"
+// Uncomment this code because Rinkeby testnet is deprecated
+// Don't forget to update your .env file with GORELI testnet RPC URL
+// const GORELI_RPC_URL =
+//   process.env.GORELI_RPC_URL ||
+//   "https://eth-goreli.alchemyapi.io/v2/your-api-key"
+
 const PRIVATE_KEY =
   process.env.PRIVATE_KEY ||
   "0x11ee3108a03081fe260ecdc106554d09d9d1209bcafd46942b10e02943effc4a"
@@ -28,6 +34,11 @@ module.exports = {
       accounts: [PRIVATE_KEY],
       chainId: 4,
     },
+//      goreli: {
+//       url: GORELI_RPC_URL,
+//       accounts: [PRIVATE_KEY],
+//       chainId: 5,
+//     },
     localhost: {
       url: "http://localhost:8545",
       chainId: 31337,
