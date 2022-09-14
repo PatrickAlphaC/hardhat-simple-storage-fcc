@@ -1,5 +1,5 @@
 const { ethers } = require("hardhat")
-const { expect, assert } = require("chai")
+const { assert } = require("chai")
 
 // describe("SimpleStorage", () => {})
 describe("SimpleStorage", function () {
@@ -11,7 +11,7 @@ describe("SimpleStorage", function () {
     simpleStorage = await simpleStorageFactory.deploy()
   })
 
-  it("Should start with a favorite number of 0", async function () {
+  it("Should start with a favourite number of 0", async function () {
     const currentValue = await simpleStorage.retrieve()
     const expectedValue = "0"
     // assert
@@ -31,19 +31,19 @@ describe("SimpleStorage", function () {
   // Extra - this is not in the video
   it("Should work correctly with the people struct and array", async function () {
     const expectedPersonName = "Patrick"
-    const expectedFavoriteNumber = "16"
+    const expectedFavouriteNumber = "16"
     const transactionResponse = await simpleStorage.addPerson(
       expectedPersonName,
-      expectedFavoriteNumber
+      expectedFavouriteNumber
     )
     await transactionResponse.wait(1)
-    const { favoriteNumber, name } = await simpleStorage.people(0)
+    const { favouriteNumber, name } = await simpleStorage.people(0)
     // We could also do it like this
     // const person = await simpleStorage.people(0)
-    // const favNumber = person.favoriteNumber
+    // const favNumber = person.favouriteNumber
     // const pName = person.name
 
     assert.equal(name, expectedPersonName)
-    assert.equal(favoriteNumber, expectedFavoriteNumber)
+    assert.equal(favouriteNumber, expectedFavouriteNumber)
   })
 })
