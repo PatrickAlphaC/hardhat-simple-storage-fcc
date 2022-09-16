@@ -4,14 +4,34 @@ This is a section of the Javascript Blockchain/Smart Contract FreeCodeCamp Cours
 
 *[⌨️ (08:20:17) Lesson 6: Hardhat Simple Storage](https://www.youtube.com/watch?v=gyMwXuJrbJQ&t=30017s)*
 
+*This repo has been updated for Goerli over Rinkeby.*
+
 [Full Repo](https://github.com/smartcontractkit/full-blockchain-solidity-course-js)
 
 - [Hardhat Simple Storage](#hardhat-simple-storage)
+- [- Usage](#--usage)
 - [Getting Started](#getting-started)
   - [Requirements](#requirements)
   - [Quickstart](#quickstart)
   - [Typescript](#typescript)
+    - [Optional Gitpod](#optional-gitpod)
 - [Usage](#usage)
+  - [Testing](#testing)
+    - [Test Coverage](#test-coverage)
+  - [Estimate gas](#estimate-gas)
+  - [Local Deployment](#local-deployment)
+    - [Important localhost note](#important-localhost-note)
+  - [Deployment to a testnet or mainnet](#deployment-to-a-testnet-or-mainnet)
+    - [Verify on etherscan](#verify-on-etherscan)
+- [In it's current state, if you have your api key set, it will auto verify rinkeby contracts!](#in-its-current-state-if-you-have-your-api-key-set-it-will-auto-verify-rinkeby-contracts)
+- [Linting](#linting)
+- [Thank you!](#thank-you)
+<<<<<<< HEAD
+- [Usage](#usage)
+=======
+    - [Optional Gitpod](#optional-gitpod)
+- [Useage](#useage)
+>>>>>>> 4a00535 (goerli update)
   - [Testing](#testing)
     - [Test Coverage](#test-coverage)
   - [Estimate gas](#estimate-gas)
@@ -116,11 +136,11 @@ If you use metamask with a local network, everytime you shut down your node, you
 
 1. Setup environment variables
 
-You'll want to set your `RINKEBY_RPC_URL` and `PRIVATE_KEY` as environment variables. You can add them to a `.env` file, similar to what you see in `.env.example`.
+You'll want to set your `GOERLI_RPC_URL` and `PRIVATE_KEY` as environment variables. You can add them to a `.env` file, similar to what you see in `.env.example`.
 
 - `PRIVATE_KEY`: The private key of your account (like from [metamask](https://metamask.io/)). **NOTE:** FOR DEVELOPMENT, PLEASE USE A KEY THAT DOESN'T HAVE ANY REAL FUNDS ASSOCIATED WITH IT.
   - You can [learn how to export it here](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key).
-- `RINKEBY_RPC_URL`: This is url of the rinkeby testnet node you're working with. You can get setup with one for free from [Alchemy](https://alchemy.com/?a=673c802981)
+- `GOERLI_RPC_URL`: This is url of the goerli testnet node you're working with. You can get setup with one for free from [Alchemy](https://alchemy.com/?a=673c802981)
 
 2. Get testnet ETH
 
@@ -129,14 +149,22 @@ Head over to [faucets.chain.link](https://faucets.chain.link/) and get some tesn
 3. Deploy
 
 ```
+<<<<<<< HEAD
 npx hardhat run scripts/deploy.js --network rinkeby
+=======
+npx hardhat run scripts/deploy.js --network goerli
+>>>>>>> 4a00535 (goerli update)
 ```
 
 ### Verify on etherscan
 
 If you deploy to a testnet or mainnet, you can verify it if you get an [API Key](https://etherscan.io/myapikey) from Etherscan and set it as an environment variable named `ETHERSCAN_API_KEY`. You can pop it into your `.env` file as seen in the `.env.example`.
 
+<<<<<<< HEAD
 In it's current state, if you have your api key set, it will auto verify rinkeby contracts!
+=======
+In it's current state, if you have your api key set, it will auto verify goerli contracts!
+>>>>>>> 4a00535 (goerli update)
 
 However, you can manual verify with:
 
