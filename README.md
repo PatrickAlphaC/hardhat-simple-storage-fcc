@@ -4,6 +4,25 @@ This is a section of the Javascript Blockchain/Smart Contract FreeCodeCamp Cours
 
 Video Coming soon...
 
+## Hardhat Installation Instructions
+
+We recommend using npm 7 or later. If you do that, then you just need to install the plugin itself:
+
+```bash
+npm install --save-dev @nomicfoundation/hardhat-toolbox
+```
+If you are using an older version of npm, you'll also need to install all the packages used by the toolbox.
+
+```bash
+npm install --save-dev @nomicfoundation/hardhat-toolbox @nomicfoundation/hardhat-network-helpers @nomicfoundation/hardhat-chai-matchers @nomiclabs/hardhat-ethers @nomiclabs/hardhat-etherscan chai ethers hardhat-gas-reporter solidity-coverage @typechain/hardhat typechain @typechain/ethers-v5 @ethersproject/abi @ethersproject/providers
+```
+That's also the case if you are using yarn:
+
+```bash
+yarn add --dev @nomicfoundation/hardhat-toolbox @nomicfoundation/hardhat-network-helpers @nomicfoundation/hardhat-chai-matchers @nomiclabs/hardhat-ethers @nomiclabs/hardhat-etherscan chai ethers hardhat-gas-reporter solidity-coverage @typechain/hardhat typechain @typechain/ethers-v5 @ethersproject/abi @ethersproject/providers
+```
+for more info head over to [Hardhat Documentation - Migration Guide](https://hardhat.org/hardhat-runner/docs/guides/migrating-from-hardhat-waffle)
+
 [Full Repo](https://github.com/smartcontractkit/full-blockchain-solidity-course-js)
 
 - [Hardhat Simple Storage - Typescript Edition](#hardhat-simple-storage---typescript-edition)
@@ -27,8 +46,6 @@ This project is apart of the Hardhat FreeCodeCamp video.
 Video coming soon...
 
 # Getting Started
-
-## Requirements
 
 ## Requirements
 
@@ -84,11 +101,11 @@ yarn hardhat coverage
 
 1. Setup environment variabltes
 
-You'll want to set your `KOVAN_RPC_URL` and `PRIVATE_KEY` as environment variables. You can add them to a `.env` file, similar to what you see in `.env.example`.
+You'll want to set your `GOERLI_RPC_URL` and `PRIVATE_KEY` as environment variables. You can add them to a `.env` file, similar to what you see in `.env.example`.
 
 - `PRIVATE_KEY`: The private key of your account (like from [metamask](https://metamask.io/)). **NOTE:** FOR DEVELOPMENT, PLEASE USE A KEY THAT DOESN'T HAVE ANY REAL FUNDS ASSOCIATED WITH IT.
   - You can [learn how to export it here](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key).
-- `KOVAN_RPC_URL`: This is url of the kovan testnet node you're working with. You can get setup with one for free from [Alchemy](https://alchemy.com/?a=673c802981)
+- `GOERLI_RPC_URL`: This is url of the kovan testnet node you're working with. You can get setup with one for free from [Alchemy](https://alchemy.com/?a=673c802981)
 
 2. Get testnet ETH
 
@@ -97,7 +114,7 @@ Head over to [faucets.chain.link](https://faucets.chain.link/) and get some tesn
 3. Deploy
 
 ```
-yarn hardhat run scripts/deploy.ts --network rinkeby
+yarn hardhat run scripts/deploy.ts --network goerli
 ```
 
 ## Estimate gas
