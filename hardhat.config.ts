@@ -1,13 +1,8 @@
-import("@nomiclabs/hardhat-waffle")
-import("hardhat-gas-reporter")
+import "@nomicfoundation/hardhat-toolbox"
 import("./tasks/block-number")
-import("@nomiclabs/hardhat-etherscan")
 import { task, HardhatUserConfig } from "hardhat/config"
 import "./tasks/block-number"
 import "dotenv/config"
-import "solidity-coverage"
-import "@typechain/hardhat"
-import "@nomiclabs/hardhat-ethers"
 
 const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY || ""
 const RINKEBY_RPC_URL =
