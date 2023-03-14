@@ -10,9 +10,9 @@ import "@typechain/hardhat"
 import "@nomiclabs/hardhat-ethers"
 
 const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY || ""
-const RINKEBY_RPC_URL =
-  process.env.RINKEBY_RPC_URL ||
-  "https://eth-mainnet.alchemyapi.io/v2/your-api-key"
+const SEPOLIA_RPC_URL =
+  process.env.SEPOLIA_RPC_URL ||
+  "https://eth-sepolia.g.alchemy.com/v2/your-api-key"
 const PRIVATE_KEY =
   process.env.PRIVATE_KEY ||
   ""
@@ -22,10 +22,10 @@ const config: HardhatUserConfig = {
   defaultNetwork: "hardhat",
   networks: {
     hardhat: {},
-    rinkeby: {
-      url: RINKEBY_RPC_URL,
+    sepolia: {
+      url: SEPOLIA_RPC_URL,
       accounts: [PRIVATE_KEY],
-      chainId: 4,
+      chainId: 11155111,
     },
   },
   solidity: "0.8.7",
