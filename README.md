@@ -6,6 +6,25 @@ This is a section of the Javascript Blockchain/Smart Contract FreeCodeCamp Cours
 
 *This repo has been updated for Sepolia over Goerli.*
 
+## Hardhat Installation Instructions
+
+We recommend using npm 7 or later. If you do that, then you just need to install the plugin itself:
+
+```bash
+npm install --save-dev @nomicfoundation/hardhat-toolbox
+```
+If you are using an older version of npm, you'll also need to install all the packages used by the toolbox.
+
+```bash
+npm install --save-dev @nomicfoundation/hardhat-toolbox @nomicfoundation/hardhat-network-helpers @nomicfoundation/hardhat-chai-matchers @nomiclabs/hardhat-ethers @nomiclabs/hardhat-etherscan chai ethers hardhat-gas-reporter solidity-coverage @typechain/hardhat typechain @typechain/ethers-v5 @ethersproject/abi @ethersproject/providers
+```
+That's also the case if you are using yarn:
+
+```bash
+yarn add --dev @nomicfoundation/hardhat-toolbox @nomicfoundation/hardhat-network-helpers @nomicfoundation/hardhat-chai-matchers @nomiclabs/hardhat-ethers @nomiclabs/hardhat-etherscan chai ethers hardhat-gas-reporter solidity-coverage @typechain/hardhat typechain @typechain/ethers-v5 @ethersproject/abi @ethersproject/providers
+```
+for more info head over to [Hardhat Documentation - Migration Guide](https://hardhat.org/hardhat-runner/docs/guides/migrating-from-hardhat-waffle)
+
 [Full Repo](https://github.com/smartcontractkit/full-blockchain-solidity-course-js)
 
 - [Hardhat Simple Storage](#hardhat-simple-storage)
