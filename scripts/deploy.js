@@ -1,5 +1,6 @@
 // imports
 const { ethers, run, network } = require("hardhat")
+require("dotenv").config()
 
 // async main
 async function main() {
